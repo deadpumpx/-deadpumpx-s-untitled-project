@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SWILL Messenger | Админ</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+    <h1>🛡️ Панель полного контроля SWILL</h1>
+    <p><strong>Внимание:</strong> Эта панель использует служебный ключ для полного доступа ко всей базе данных.</p>
+
+    <div style="background:#f0f0f0; padding:15px; margin-bottom:20px;">
+        <h3>1. Поиск и вход в любой аккаунт</h3>
+        <input type="text" id="search-email" placeholder="Email пользователя">
+        <button onclick="adminFindUser()">Найти и войти</button>
+        <div id="user-data"></div>
+    </div>
+
+    <div style="background:#f0f0f0; padding:15px; margin-bottom:20px;">
+        <h3>2. Просмотр всех сообщений из базы</h3>
+        <button onclick="adminReadAllMessages()">Показать ВСЕ сообщения</button>
+        <div id="all-messages" style="margin-top:10px;"></div>
+    </div>
+
+    <div style="background:#f0f0f0; padding:15px;">
+        <h3>3. Прямой SQL-запрос к базе</h3>
+        <textarea id="sql-query" style="width:100%; height:100px;" placeholder="SELECT * FROM messages;"></textarea>
+        <button onclick="adminRunSQL()">Выполнить</button>
+        <pre id="sql-result"></pre>
+    </div>
+
+    <p><a href="index.html">← Назад в чат</a></p>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
