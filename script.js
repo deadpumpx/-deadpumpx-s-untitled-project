@@ -1,14 +1,14 @@
 // ================== КОНФИГУРАЦИЯ ==================
-// URL взят ТОЧНО с твоего скриншота Vercel
-const SUPABASE_URL = 'https://azkbmxotcwcqumogzepr.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_CvTnEkt4MbMvwuLqJnWj7w__0ue3BWy';
-const SUPABASE_SERVICE_ROLE_KEY = 'sb_secret_gldKkGXtz__NoIojJSZBHg_0jGnbi-Q';
+const SUPABASE_URL = 'https://mldsexrzrrvgplhibdyy.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_-NjEOi5cEJNDdklouCIylA_8VXmQBtP';
+const SUPABASE_SERVICE_ROLE_KEY = 'sb_secret_ZuWHpzcXGtJwftK3_mIMhg_0E0GJb3k';
 
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const supabaseAdmin = window.supabase.createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
 // ================== ФУНКЦИИ ==================
 async function signUp() {
+    console.log('Функция signUp вызвана!');
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const { data, error } = await supabase.auth.signUp({ email, password });
